@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_58872_needit_pruebalFtag.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate var="jvar_gr" object ="true">
+		var gr= new GlideRecord("incident");
+		gr.addQuery("active",true);
+	gr.query();
+	gr;
+</g:evaluate>
+	<j:if test="${!jvar_gr.hasNext()}">
+		We did not fin myactive incidents
+	</j:if>
+	<j:if test="${jvar_gr.hasNext()}">
+		We find ${jvar_gr.getRowCount()} mesage
+	</j:if>
+	
+</j:jelly>]]></html>
+        <name>pruebalFtag</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-13 22:24:30</sys_created_on>
+        <sys_id>0f0a42fd97a9e1100668d6081153af5d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>pruebalFtag</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ui_page_0f0a42fd97a9e1100668d6081153af5d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-13 22:29:22</sys_updated_on>
+    </sys_ui_page>
+</record_update>
